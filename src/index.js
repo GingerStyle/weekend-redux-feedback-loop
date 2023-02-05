@@ -8,10 +8,16 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import { Provider } from 'react-redux';
 
 import feeling from './reducers/feeling';
+import understanding from './reducers/understanding';
+import support from './reducers/support';
+import comments from './reducers/comments';
 
 const storeInstance = createStore(
     combineReducers({
         feeling,
+        understanding,
+        support,
+        comments
     }),
     applyMiddleware(logger),
 );
