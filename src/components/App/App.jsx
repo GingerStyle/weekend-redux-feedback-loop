@@ -24,7 +24,7 @@ function App() {
         <Route path="/understanding"><UnderstandingPart /></Route>
         <Route path="/comments"><CommentsPart /></Route>
         <Route path="/support"><SupportPart /></Route>
-        <Route path="/review"><ReviewPart/></Route>
+        <Route path="/review"><ReviewPart /></Route>
 
         <button onClick={() => history.push('/feeling')}>Add New Feedback</button>
       </Router>
