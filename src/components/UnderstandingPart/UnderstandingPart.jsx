@@ -20,7 +20,7 @@ function Understanding() {
             <h4>1 is not understanding. 5 is well understood.</h4>
             <br></br>
             <select id="valueList" onChange={(event) => dispatch({type: 'SET_UNDERSTANDING', payload: event.target.value})}>
-                <option value ='select'>Select</option>
+                <option value='select'>Select</option>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>

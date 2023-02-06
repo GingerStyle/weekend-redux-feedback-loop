@@ -21,3 +21,8 @@
 h4 {
   font-style: italic;
 }
+
+#comments-input {
+  width: 200px;
+  height: 100px;
+}
