@@ -1,7 +1,7 @@
 function review() {
     return(
         <>
-            Return Part
+            <button onClick={() => history.push('/feeling')}>Add New Feedback</button>
         </>
     );
 }

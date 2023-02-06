@@ -7,6 +7,7 @@ import UnderstandingPart from '../UnderstandingPart/UnderstandingPart';
 import CommentsPart from '../CommentsPart/CommentsPart';
 import SupportPart from '../SupportPart/SupportPart';
 import ReviewPart from '../ReviewPart/ReviewPart';
+import WelcomePart from '../WelcomePart/WelcomePart';
 import { useHistory } from 'react-router-dom';
 
 function App() {
@@ -19,14 +20,14 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-        
+        <Route exact path='/'><WelcomePart /></Route>
         <Route path="/feeling"><FeelingPart /></Route>
         <Route path="/understanding"><UnderstandingPart /></Route>
         <Route path="/comments"><CommentsPart /></Route>
         <Route path="/support"><SupportPart /></Route>
         <Route path="/review"><ReviewPart /></Route>
 
-        <button onClick={() => history.push('/feeling')}>Add New Feedback</button>
+        
       </Router>
     </div>
   );
