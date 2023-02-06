@@ -6,6 +6,7 @@ function Understanding() {
     const history = useHistory();
     const dispatch = useDispatch();
 
+    //function to make sure that a numbered selection was made before moving to next route
     const inputValidation = () => {
         if(understanding == 0 || understanding == 'select' ) {
             alert('You must choose numbers from 1 to 5');

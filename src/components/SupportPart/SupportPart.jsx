@@ -6,6 +6,7 @@ function Support() {
     const history = useHistory();
     const dispatch = useDispatch();
 
+    //function to make sure that a numbered selection was made before moving to next route
     const inputValidation = () => {
         if(support == 0 || support == 'select' ) {
             alert('You must choose numbers from 1 to 5');

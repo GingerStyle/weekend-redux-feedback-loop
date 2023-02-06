@@ -8,6 +8,7 @@ import CommentsPart from '../CommentsPart/CommentsPart';
 import SupportPart from '../SupportPart/SupportPart';
 import ReviewPart from '../ReviewPart/ReviewPart';
 import WelcomePart from '../WelcomePart/WelcomePart';
+import FeedbackPart from '../FeedbackPart/FeedbackPart';
 import { useHistory } from 'react-router-dom';
 
 function App() {
@@ -26,8 +27,7 @@ function App() {
         <Route path="/comments"><CommentsPart /></Route>
         <Route path="/support"><SupportPart /></Route>
         <Route path="/review"><ReviewPart /></Route>
-
-        
+        <Route path='/feedback'><FeedbackPart /></Route>
       </Router>
     </div>
   );

@@ -6,6 +6,7 @@ function Feeling() {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    //function to make sure that a feeling was entered
     const inputValidation = () => {
         if (feelingReducer == ''){
             alert('This field is required');
