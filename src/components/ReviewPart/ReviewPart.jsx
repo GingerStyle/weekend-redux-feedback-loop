@@ -12,13 +12,8 @@ function review() {
 
     //function to handle what happens when the Change Feedback button is pressed
     const changeFeedback = () => {
-        //clear values to start over
-        dispatch({type: 'SET_FEELING', payload: ''});
-        dispatch({type: 'SET_UNDERSTANDING', payload: 0});
-        dispatch({type: 'SET_SUPPORT', payload: 0});
-        dispatch({type: 'SET_COMMENTS', payload: ''});
-        //move to welcome screen
-        history.push('/');
+        //move to feeling screen
+        history.push('/feeling');
     }
 
     //function to handle when the Submit Feedback button is pressed
