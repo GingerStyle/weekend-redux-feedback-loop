@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import FeelingPart from '../FeelingPart/FeelingPart';
@@ -9,10 +8,8 @@ import SupportPart from '../SupportPart/SupportPart';
 import ReviewPart from '../ReviewPart/ReviewPart';
 import WelcomePart from '../WelcomePart/WelcomePart';
 import FeedbackPart from '../FeedbackPart/FeedbackPart';
-import { useHistory } from 'react-router-dom';
 
 function App() {
-  const history = useHistory();
 
   return (
     <div className='App'>

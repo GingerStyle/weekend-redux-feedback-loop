@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import axios from 'axios';
 
 function review() {
     const feeling = useSelector(store => store.feeling);
@@ -16,12 +17,29 @@ function review() {
         dispatch({type: 'SET_UNDERSTANDING', payload: 0});
         dispatch({type: 'SET_SUPPORT', payload: 0});
         dispatch({type: 'SET_COMMENTS', payload: ''});
+        //move to welcome screen
         history.push('/');
     }
 
     //function to handle when the Submit Feedback button is pressed
     const submitFeedback = () => {
-        history.push('/')
+        axios.post('/feedback', {
+            feelings: {feeling},
+            understand: {understanding},
+            supportLevel: {support},
+            comment: {comments}
+        })
+        .then(() => {
+            //clear values
+            dispatch({type: 'SET_FEELING', payload: ''});
+            dispatch({type: 'SET_UNDERSTANDING', payload: 0});
+            dispatch({type: 'SET_SUPPORT', payload: 0});
+            dispatch({type: 'SET_COMMENTS', payload: ''});
+            //move to feedback submission success screen
+            history.push('/feedback');
+        }).catch((error) => {
+            console.log('error with adding feedback to database', error);
+        });
     }
 
     return(
@@ -32,6 +50,7 @@ function review() {
             Level of understanding: {understanding}<br></br>
             Level of support: {support}<br></br>
             Comments: {comments}
+            <br></br>
             <br></br>
             <button onClick={() => changeFeedback()}>Change Feedback</button>
             <button onClick={() => submitFeedback()}>Submit Feedback</button>
