@@ -7,7 +7,7 @@ const history = useHistory();
         <>
         <h3>Feedback submission success!</h3>
         <br></br>
-        <button onClick={() => history.push('/')}>Add New Feedback</button>
+        <button onClick={() => history.push('/feeling')}>Add New Feedback</button>
         </>
     );
 }
